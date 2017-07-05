@@ -1,0 +1,38 @@
+<div class="container" id="toolbar">
+   <div class="inner">
+       <div class="row">
+      <div class="col-lg-12 room-content">
+            <header [@fallIn]="state">  
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 col-xs-12 col-sm-12">
+                        
+    <h2 class="welcome-displayName col-xs-12"><img class="img img-rounded room-image" src="{{this.name.auth.photoURL}}" alt="" height="80" width="80">Hey {{ name.auth.displayName }}!</h2>
+                               
+                      <button (click)="logout()" class="basic-btn"><span class="glyphicon glyphicon glyphicon-user"></span>&nbsp;&nbsp;Logout</button>
+      <button *ngIf="count_bids" (click)="cart()" class="basic-btn"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Purchase ({{count_bids}})</button>
+      <button *ngIf="!count_bids" class="basic-btn"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Cart is Empty</button>
+      <button class="basic-btn"><span class="glyphicon glyphicon-piggy-bank"></span>&nbsp;&nbsp;Payments History</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+        
+    </header>
+<div id="page" [@moveInLeft]="state">
+     
+     <div class="row">
+         <div class="col-lg-2"></div>
+                <div class="col-lg-8"> 
+                    <button *ngIf="products_data" (click)="roomOne()" class="basic-btn"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;Browse Auctioned Items</button>
+                    <button class="basic-btn"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Contact Us</button>
+                    <button *ngIf="!products_data" class="basic-btn"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;No Auctioned Items</button>
+                </div>
+         <div class="col-lg-2"></div>
+                
+     </div>
+   
+</div>  
+      </div>
+   </div>
+   </div>
+</div>

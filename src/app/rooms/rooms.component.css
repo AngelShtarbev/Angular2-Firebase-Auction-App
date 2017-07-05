@@ -1,0 +1,22 @@
+#toolbar{
+    background-color: white;
+    height:800px;
+    margin-top:200px;
+}
+.welcome-displayName{
+    text-align: center;
+
+}
+.inner{
+    opacity: 1.0;
+}
+.room-content{
+    margin-top:10%;
+}
+.room-image{
+    display:inline-block;
+    margin-right:50px;
+    border-radius:50%;
+}
+  
+ 

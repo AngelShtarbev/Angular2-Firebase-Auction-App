@@ -1,0 +1,113 @@
+#toolbar {
+    padding:0;
+    width:70%;
+    margin-left:-35%;
+       
+    height: 800px !important;
+}
+.form-container{
+    display: block;
+    position: relative;
+ 
+
+}
+header {
+    background:#3B8598;
+    width:100%;
+}
+
+.basic-btn {
+    width:100px;
+    margin:0;
+}
+
+#page {
+    padding:3em;
+    margin:0;
+}
+
+#page img {
+    margin-top:30px;
+}
+
+h2 {
+    margin:0;
+}
+
+img.da{
+        height: 100px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.bidding-input{
+    margin-top:20px;
+}
+.l-image{
+    transition:all 0.5s ease;
+}
+.l-image:hover{
+   
+    border:1px solid #e3e3e3;
+}
+img.test-image.da.img.img-responsive{
+    height:60px;
+
+}
+.furna{
+    font-size:18px;
+}
+#grabadavur-input{
+        padding: 30px;
+    width: 100%;
+    margin: 10px;
+    font-size: 22px;
+}
+.grabadavur{
+       
+    text-decoration: none;
+    list-style-type: none;
+    min-height:190px;
+    height:80px;
+    
+    padding:0 !important;
+}
+.grabadavur li{
+    padding:30px;
+    box-sizing:border-box;
+}
+ .mechka{
+         display: block;
+         
+         
+ 
+    position: relative;
+    overflow-y: scroll;
+     
+ }
+ .antifriz{
+     text-align: center;
+ }
+ .burp{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 30px;
+    vertical-align: middle;
+    font-size: 22px;
+ }
+ .test-image{
+     border-radius: 50%;
+ }
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:90%;
+        margin-left: -45%;
+    }
+}
+
+@media (min-width: 768px){
+    
+}

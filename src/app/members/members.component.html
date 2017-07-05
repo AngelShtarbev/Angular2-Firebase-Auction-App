@@ -1,0 +1,67 @@
+<div class="form-container" id="toolbar">
+    <header [@fallIn]="state">  
+      <button *ngIf="!count_bids" routerLink="/rooms" class="basic-btn">Back</button>
+      <button *ngIf="count_bids" (click)="removeBids()" class="basic-btn">Back</button>
+        
+    </header>
+ 
+<div id="page" [@moveInLeft]="state">
+    <!--<h2>Current Auctioned Items</h2>
+    <br/>
+    <div class="chat-container" *ngFor="let item of prods | async">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="container-fluid">
+          <div class="col-md-12">
+          <h2>{{item.product_name}}</h2>
+          <div class="col-md-6">    
+          <img style="width:200px; height:200px;" src="{{item.product_img2}}" alt="" class="img-thumbnail">
+          <button style="margin-left:50px;margin-top:80px;width:300px;" class="basic-btn pull-right">Place Bid</button>
+          <div class="alert alert-info">
+           <strong></strong> Time Left: {{item.time_left}}
+          </div>
+          </div>      
+        </div>
+        <br/>    
+    </div>-->
+    <div class="chat-container" *ngFor="let item of product | async">
+    <h2>{{item.product_name}}</h2>
+    <div class="chat-container">
+       <h2>Product Overview</h2>
+       <h3>{{item.product_desc}}</h3>
+       <h3>Seller: Estore</h3>
+       <h3>Seller Phone: +359 895 497 996</h3>
+       <h3>Seller Email: estore@gmail.com</h3>
+       <h3>Registered Since: 22.04.2017 17:20:23</h3> 
+    </div>
+    <br/>
+    <h4 style="font-size:22px;" *ngFor="let last of lastBid | async">Last Bid:{{last.bid}}$&nbsp;&nbsp;Next Minimum Bid: 320$&nbsp;&nbsp;Time Left:5days,20h 22m 05s</h4>
+     <!--<app-timer></app-timer>-->
+    <div class="col-lg-12 col-xs-12" style="display:block;">
+    <a class="l-image col-xs-12 col-lg-4" href="{{item.product_img1}}" data-lightbox="image-1" data-title="My caption"><img class="da img img-responsive" src="{{item.product_img1}}" alt="" height="100"></a>
+    <a class="l-image col-xs-12 col-lg-4" href="{{item.product_img2}}" data-lightbox="image-1" data-title="My caption"><img class="da img img-responsive" src="{{item.product_img2}}" alt=""></a>
+    <a class="l-image col-xs-12 col-lg-4" href="{{item.product_img3}}" data-lightbox="image-1" data-title="My caption"><img class="da img img-responsive" src="{{item.product_img3}}" alt=""></a>
+    </div>        
+    </div>     
+    <div class="col-lg-6 col-xs-12">
+        
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+    <input id="grabadavur-input" class="form-input bidding-input" type="text" placeholder="Place Bid" (keyup.enter)="bid($event.target.value)" [(ngModel)]="bidValue"/>
+        </div>
+    </div>
+    <div class="row" style="display:block;height:280px;position:relative;margin-top:30px;background-color:#c2c2c2">
+    <div class="col-lg-12 mechka col-xs-12 col-sm-12 col-md-12">
+        <h3 class="antifriz">Bidding History</h3>
+        <h4 style="font-size:22px;" *ngFor="let last of lastBid | async">Last Bid:{{last.bid}} $  </h4>
+        <ul class="grabadavur" style="text-decoration:none;list-style-type:none;">
+    <li *ngFor="let item of items | async" style="background-color:white;margin-bottom:25px;">   
+         <img class="test-image da img img-responsive" src="{{item.image}}" height="70" alt=""><span class="burp">Bidder:{{item.name}} Amount:${{item.bid}} Date:{{item.date}}</span>
+    </li>
+
+</ul>  
+</div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="form-container" id="toolbar">
+    <header [@fallIn]="state">  
+      <button routerLink="/rooms" class="basic-btn">Back</button>
+     
+    </header>
+<div id="page" [@moveInLeft]="state">
+<div class="chat-container" *ngFor="let item of checkout | async">
+   <div class="row">
+       <div class="row" style="display:block;">
+         <h2>Product Overview</h2>
+         <br/>
+         <h3>Product Name:{{imagesString}}</h3>
+         <!--<a class="l-image col-xs-12 col-lg-4" href="http://ecx.images-amazon.com/images/I/61pNCtIdQUL._SL1100_.jpg" data-lightbox="image-1" data-title="My caption"><img class="da img img-responsive" src="http://ecx.images-amazon.com/images/I/61pNCtIdQUL._SL1100_.jpg" alt="" height="100"></a>-->
+         <a class="l-image col-xs-12 col-lg-4" href="http://ecx.images-amazon.com/images/I/61sfcfC8rDL._SL1240_.jpg" data-lightbox="image-1" data-title="My caption"><img class="da img img-responsive" src="http://ecx.images-amazon.com/images/I/61sfcfC8rDL._SL1240_.jpg" alt="" height="100"></a>
+         <a class="l-image col-xs-12 col-lg-4" href="http://ecx.images-amazon.com/images/I/71Yo89jyp5L._SL1500_.jpg" data-lightbox="image-1" data-title="My caption"><img class="da img img-responsive" src="http://ecx.images-amazon.com/images/I/71Yo89jyp5L._SL1500_.jpg" alt="" height="100"></a>
+       </div>
+       <div class="row" style="display:block;">  
+       <h3>Product Seller: Estore</h3>
+       <h3>Product Seller Phone: +359 895 497 996</h3>
+       <h3>Product Seller Email: estore@gmail.com</h3>
+       </div> 
+    </div>
+
+   <h2>Total: ${{item.items_total}}</h2>
+
+   <button (click)="buyStripe()" class="basic-btn">Buy/Stripe</button>
+   <button (click)="buyPayPal()" id = "paypal-button-container" class="basic-btn">Buy/PayPal</button> 
+   
+</div>  
+</div>
+</div>

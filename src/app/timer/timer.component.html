@@ -1,0 +1,15 @@
+<span defaultOverlayTarget></span>
+<div id="container col-xs-12">
+      <div id="timer">
+        <div id="time">
+          <span id="minutes">{{toDoubleDigit(minutes)}}</span>
+          <span id="colon">:</span>
+          <span id="seconds">{{toDoubleDigit(seconds)}}</span>
+        </div>
+        <div id="filler" [ngStyle]="{height : fillerHeight + 'px'}"></div>
+    </div>
+    <div id="buttons">
+        <!--<button id="start" (click)="startTimer()">Start</button>
+        <button id="stop" (click)="stopTimer()">Stop</button>-->
+    </div>
+</div>
